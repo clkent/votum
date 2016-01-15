@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.2.4'
 
+#twilio
+gem 'twilio-ruby'
+
 #bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha3'
 source 'https://rails-assets.org' do
