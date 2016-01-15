@@ -13,7 +13,8 @@ ActiveAdmin.register User do
 #   permitted
 # end
 
- permit_params :email, :password, :password_confirmation, :first, :last, :address, :city, :state, :zip, :phone, :reset_password_token, :reset_password_sent_at
+ permit_params :email, :password, :password_confirmation, :subscribed, :first, :last, :address, :city, :state, :zip, :phone, :reset_password_token, :reset_password_sent_at
+
 
   index do
     selectable_column
@@ -36,6 +37,7 @@ ActiveAdmin.register User do
     	number_to_phone user.phone
      end
     end
+    column :subscribed
     actions
   end
 
@@ -56,10 +58,9 @@ ActiveAdmin.register User do
       f.input :state
       f.input :zip
       f.input :phone
+      f.input :subscribed
     end
     f.actions
   end
-
-
 
 end

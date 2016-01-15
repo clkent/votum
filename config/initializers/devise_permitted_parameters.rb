@@ -8,8 +8,8 @@ module DevisePermittedParameters
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :first << :last << :phone << :address << :city << :state << :zip
-    devise_parameter_sanitizer.for(:account_update) << :first << :last << :phone << :address << :city << :state << :zip
+    devise_parameter_sanitizer.for(:sign_up) << :first << :last << :phone << :address << :city << :state << :zip << :subscribed
+    devise_parameter_sanitizer.for(:account_update) << :first << :last << :phone << :address << :city << :state << :zip << :subscribed
   end
 
 end

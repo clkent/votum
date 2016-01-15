@@ -10,6 +10,13 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+   columns do
+    panel "Send Message" do
+        para    # renders app/views/admin/dashboard/_send_first_message.html.erb
+                render 'send_first_message', :layout => false
+
+    end
+   end
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do
