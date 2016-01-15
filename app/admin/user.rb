@@ -15,6 +15,7 @@ ActiveAdmin.register User do
 
  permit_params :email, :password, :password_confirmation, :subscribed, :first, :last, :address, :city, :state, :zip, :phone, :reset_password_token, :reset_password_sent_at
 
+
   index do
     selectable_column
     id_column
@@ -61,7 +62,5 @@ ActiveAdmin.register User do
     end
     f.actions
   end
-
-
 
 end
