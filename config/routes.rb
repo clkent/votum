@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/about' => 'pages#about'
   get '/test' => 'pages#test'
-  post '/first_sms' => 'twilio#first_sms'
+  post '/send_sms' => 'twilio#send_sms'
+  post '/send_welcome' => 'twilio#send_welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
