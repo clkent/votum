@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
   get '/test' => 'pages#test'
   post '/send_sms' => 'twilio#send_sms'
+  post '/send_sms_all' => 'twilio#send_sms_all'
   post '/send_welcome' => 'twilio#send_welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.

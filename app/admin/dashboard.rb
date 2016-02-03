@@ -3,19 +3,26 @@ ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc{ I18n.t("active_admin.dashboard") }
 
   content title: proc{ I18n.t("active_admin.dashboard") } do
-    div class: "blank_slate_container", id: "dashboard_default_message" do
-      span class: "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
-      end
-    end
+    # div class: "blank_slate_container", id: "dashboard_default_message" do
+    #   span class: "blank_slate" do
+    #     span I18n.t("active_admin.dashboard_welcome.welcome")
+    #     small I18n.t("active_admin.dashboard_welcome.call_to_action")
+    #   end
+    # end
 
    columns do
     panel "Send Message" do
         para    # renders app/views/admin/dashboard/_send_first_message.html.erb
-                render 'send_first_message', :layout => false
+                render 'send_a_message', :layout => false
 
     end
+
+     panel "Send Message" do
+        para    # renders app/views/admin/dashboard/_send_message_all.html.erb
+                render 'send_message_all', :layout => false
+
+    end
+
    end
     # Here is an example of a simple dashboard with columns and panels.
     #
