@@ -1,6 +1,6 @@
- <h1>Votum messages</h1>
+ <h3>Sending individual messages</h3>
 
-    <%= form_tag('/first_sms', method: 'POST') do %>
+    <%= form_tag('/send_sms', method: 'POST') do %>
     <input type="text" placeholder="enter number" name="number">
     <input type="text" placeholder="enter message here" name="message">
     <button type="submit">Submit</button>
