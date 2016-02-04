@@ -23,6 +23,16 @@ ActiveAdmin.register_page "Dashboard" do
 
     end
 
+     panel "Show Messages" do
+        para    # renders app/views/admin/dashboard/_send_message_all.html.erb
+            # ul do
+            #     Post.recent(5).map do |post|
+            #       li link_to(post.title, admin_post_path(post))
+            #     end
+            # end   
+                render 'lists_responses', :layout => false
+    end
+
    end
     # Here is an example of a simple dashboard with columns and panels.
     #

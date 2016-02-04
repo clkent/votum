@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
   get '/about' => 'pages#about'
-  get '/test' => 'pages#test'
   post '/send_sms' => 'twilio#send_sms'
   post '/send_sms_all' => 'twilio#send_sms_all'
-  post '/send_welcome' => 'twilio#send_welcome'
+  post '/lists_responses' => 'twilio#lists_responses'
+  #get '/responses' => 'twilio#responses'
+  #post '/responses' => 'twilio#responses'
+  match '/responses' => 'twilio#responses', :via => [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
