@@ -11,6 +11,12 @@ ActiveAdmin.register_page "Dashboard" do
     # end
 
    columns do
+
+    div class: "saved_messages" do
+        h3 "Welcome text"
+        h4 "Hey, it's Votum. Thanks for signing up! Add us to your contacts so you recognize us next time we text you. P.S. If you ever need to unsubscribe just text STOP."
+    end
+
     panel "Send Message" do
         para    # renders app/views/admin/dashboard/_send_first_message.html.erb
                 render 'send_a_message', :layout => false
@@ -21,6 +27,16 @@ ActiveAdmin.register_page "Dashboard" do
         para    # renders app/views/admin/dashboard/_send_message_all.html.erb
                 render 'send_message_all', :layout => false
 
+    end
+
+     panel "Show Messages" do
+        para    # renders app/views/admin/dashboard/_send_message_all.html.erb
+            # ul do
+            #     Post.recent(5).map do |post|
+            #       li link_to(post.title, admin_post_path(post))
+            #     end
+            # end   
+                render 'lists_responses', :layout => false
     end
 
    end
