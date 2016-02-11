@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.2.4'
 
+#heroku web server
+gem 'puma'
+
 #twilio
 gem 'twilio-ruby'
 
