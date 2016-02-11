@@ -20,6 +20,9 @@ gem 'devise'
 #ActiveAdmin
 gem 'activeadmin', github: 'activeadmin'
 
+#helps  serve static assets to Heroku
+gem 'rails_12factor', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgres as the database for Active Record
