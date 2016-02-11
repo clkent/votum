@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
   get '/about' => 'pages#about'
-  post '/send_sms' => 'twilio#send_sms'
-  post '/send_sms_all' => 'twilio#send_sms_all'
-  get '/lists_responses' => 'twilio#lists_responses'
+  post 'send_sms' => 'twilio#send_sms'
+  post 'send_sms_all' => 'twilio#send_sms_all'
+  get 'lists_responses' => 'twilio#lists_responses'
   #get '/responses' => 'twilio#responses'
   #post '/responses' => 'twilio#responses'
   match '/responses' => 'twilio#responses', :via => [:get, :post]
