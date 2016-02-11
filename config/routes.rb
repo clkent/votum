@@ -5,12 +5,16 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#home'
   get '/about' => 'pages#about'
-  post '/send_sms' => 'twilio#send_sms'
-  post '/send_sms_all' => 'twilio#send_sms_all'
-  post '/lists_responses' => 'twilio#lists_responses'
+  match '/send_sms' => 'twilio#send_sms', :via => [:get, :post]
+  match '/send_sms_all' => 'twilio#send_sms_all', :via => [:get, :post]
+  match '/responses' => 'twilio#responses', :via => [:get, :post]
+
+  #post '/send_sms' => 'twilio#send_sms'
+  #post '/send_sms_all' => 'twilio#send_sms_all'
+  #post '/lists_responses' => 'twilio#lists_responses'
   #get '/responses' => 'twilio#responses'
   #post '/responses' => 'twilio#responses'
-  match '/responses' => 'twilio#responses', :via => [:get, :post]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
