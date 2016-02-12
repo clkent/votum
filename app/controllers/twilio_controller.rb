@@ -1,6 +1,5 @@
 class TwilioController < ApplicationController
 
-require 'dotenv'
 Dotenv.load
 
 # Send to individual number on dashboard
