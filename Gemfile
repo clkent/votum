@@ -20,6 +20,9 @@ gem 'devise'
 #ActiveAdmin
 gem 'activeadmin', github: 'activeadmin'
 
+#dotenv
+gem 'dotenv-rails', :groups => [:development, :test]
+
 #helps  serve static assets to Heroku
 gem 'rails_12factor', group: :production
 
