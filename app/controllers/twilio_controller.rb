@@ -1,7 +1,5 @@
 class TwilioController < ApplicationController
 
-Dotenv.load
-
 # Send to individual number on dashboard
 	def send_sms
 		message = params[:message]
