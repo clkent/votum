@@ -17,8 +17,6 @@ class TwilioController < ApplicationController
 
   rescue Twilio::REST::RequestError => e
     puts e.message
-
-    head :ok
 	end
 
 
@@ -40,8 +38,6 @@ class TwilioController < ApplicationController
 
    rescue Twilio::REST::RequestError => e
     puts e.message
-
-    head :ok
   end
 
 # Lists responses 
