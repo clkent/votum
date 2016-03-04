@@ -5050,8 +5050,9 @@ a.label:focus, a.label:hover {
 .alert {
   padding: 15px;
   margin-bottom: 1rem;
-  border: 1px solid transparent;
+  border: 1px solid #f1f1f1;
   border-radius: 0.25rem;
+  text-align:center;
 }
 /* line 12, /Users/chelseakent/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/bootstrap-4.0.0.alpha3/assets/stylesheets/bootstrap/_alert.scss */
 .alert > p,

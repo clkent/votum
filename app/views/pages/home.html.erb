@@ -4,47 +4,74 @@
   <%= image_tag("cell-ss-intro.gif", width: '400') %>
   </div>
 
-  <div class="col-md-5">
+  <div class="col-md-5 lead-block">
     <%= image_tag("votum-logo.jpg", width: '170') %>
     <p class="lead">We’ll send you a few texts each month, letting you know what Congress is voting on, ask for your opinion, and let your representatives know what you think.</p>
 
     <%#= render "devise/shared/links" %>
 
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => 'simform', :id => "theForm") do |f| %>
+    <%= form_for(resource, :html => {:class => 'new_user simform'}, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
 
-      <div><%= f.label :phone %><br />
-      <%= f.phone_field :phone %></div>
+    <div class="simform-inner">
+    <ol class="questions">
+      <li><span><%= f.label :phone, "What's your number?" %></span>
+      <%= f.phone_field :phone %></li>
 
-      <div><%= f.label :first %><br />
-      <%= f.text_field :first %></div>
+      <li class="form_personal">
+      <span class="extra">We need this info so we can look up who your represenatives are.</span>
+      <span><%= f.label :first %> <%= f.label :last %></span>
+      <%= f.text_field :first %> <%= f.text_field :last %>
+      <span><%= f.label :address %></span> 
+      <%= f.text_field :address %>
+      <span><%= f.label :city, :class => 'city_label' %><%= f.label :state, :class => 'state_label' %><%= f.label :zip, :class => 'zip_label' %></span>
+      <%= f.text_field :city %>
+      <%= f.text_field :state %>
+      <%= f.text_field :zip %></li>
 
-      <div><%= f.label :last %><br />
-      <%= f.text_field :last %></div>
-
-      <div><%= f.label :address %><br />
-      <%= f.text_field :address %></div>
-
-      <div><%= f.label :city %><br />
-      <%= f.text_field :city %></div>
-
-      <div><%= f.label :state %><br />
-      <%= f.text_field :state %></div>
-
-      <div><%= f.label :zip %><br />
-      <%= f.text_field :zip %></div>
-
-      <div><%= f.label :email %><br />
-      <%= f.email_field :email %></div>
-
-      <div><%= f.label :password %><br />
-      <%= f.password_field :password %></div>
-
-      <div><%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation %></div>
-
-      <div><%= f.submit "Sign up", :class => 'btn' %></div>
+      <li class="form_email">
+        <span><%= f.label :email %></span>
+      <%= f.email_field :email %>
+     <!-- <span><%= f.label :password %></span>
+      <%= f.password_field :password %>
+      <span><%= f.label :password_confirmation %></span>
+      <%= f.password_field :password_confirmation %>-->
+      <%= f.submit "Sign up", :class => 'btn' %>
+      </li>
+    </ol>
+    <div class="controls">
+              <button class="next"><%= image_tag("arrow.png") %></button>
+              <div class="progress"></div>
+              <span class="number">
+                <span class="number-current"></span>
+                <span class="number-total"></span>
+              </span>
+              <span class="error-message"></span>
+            </div><!-- / controls -->
+          </div><!-- /simform-inner -->
     <% end %>
   </div>
 
 </div>
+
+<script>
+      var new_user = document.getElementById( 'new_user' );
+
+      new stepsForm( new_user, {
+        onSubmit : function( form ) {
+          // hide form
+          classie.addClass( new_user.querySelector( '.simform-inner' ), 'hide' );
+
+          /*
+          form.submit()
+          or
+          AJAX request (maybe show loading indicator while we don't have an answer..)
+          */
+
+          // let's just simulate something...
+         // var messageEl = new_user.querySelector( '.final-message' );
+         // messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+         // classie.addClass( messageEl, 'show' );
+        }
+      } );
+</script>
