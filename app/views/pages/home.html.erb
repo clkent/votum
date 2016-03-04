@@ -4,7 +4,7 @@
   <%= image_tag("cell-ss-intro.gif", width: '400') %>
   </div>
 
-  <div class="col-md-5">
+  <div class="col-md-5 lead-block">
     <%= image_tag("votum-logo.jpg", width: '170') %>
     <p class="lead">We’ll send you a few texts each month, letting you know what Congress is voting on, ask for your opinion, and let your representatives know what you think.</p>
 
@@ -19,7 +19,7 @@
       <%= f.phone_field :phone %></li>
 
       <li class="form_personal">
-      <span>We need this info so we can look up yo reps!</span>
+      <span class="extra">We need this info so we can look up who your represenatives are.</span>
       <span><%= f.label :first %> <%= f.label :last %></span>
       <%= f.text_field :first %> <%= f.text_field :last %>
       <span><%= f.label :address %></span> 
@@ -29,12 +29,13 @@
       <%= f.text_field :state %>
       <%= f.text_field :zip %></li>
 
-      <li><span><%= f.label :email %></span>
+      <li class="form_email">
+        <span><%= f.label :email %></span>
       <%= f.email_field :email %>
-      <span><%= f.label :password %></span>
+     <!-- <span><%= f.label :password %></span>
       <%= f.password_field :password %>
       <span><%= f.label :password_confirmation %></span>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation %>-->
       <%= f.submit "Sign up", :class => 'btn' %>
       </li>
     </ol>

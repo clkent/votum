@@ -2,6 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// paragraph
+
+.lead-block {
+	margin-top: 120px;
+}
+
+.lead { margin-top: 20px;}
+
+.extra {
+	    margin: 10px 0;
+    font-size: 14px;
+    font-style: italic;
+    font-family: georgia;
+}
 
 //Form styles
 
@@ -28,6 +42,13 @@
 	position: relative;
 	-webkit-transition: height 0.4s;
 	transition: height 0.4s;
+	display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
 }
 
 .simform ol:before {
@@ -62,7 +83,7 @@ li.form_personal.current { min-height: 350px;}
 
 /* Labels */
 
-.questions label {
+.questions label,  {
 	margin: 25px 0 0 0;
 }
 .questions li > span {
@@ -105,13 +126,13 @@ li.form_personal.current { min-height: 350px;}
 	to { -webkit-transform: translateY(0); transform: translateY(0); }
 }
 
-.form_personal label {
+.form_personal label, .email label {
 	    float: left;
     width: 50%;
     display: inline;
 }
 
-.form_personal span {
+.form_personal span,  .email label span {
 	clear:both;
 }
 
@@ -158,6 +179,15 @@ li.form_personal.current { min-height: 350px;}
 .questions .form_personal input#user_state, .questions .form_personal .state_label{ width:15%;margin-right:18px;}
 .questions .form_personal input#user_zip, .questions .form_personal .zip_label{ width:28%;}
 
+.questions input#user_email { width: 64%; margin: 0; display: inline; border-bottom: 0;}
+
+.questions input.btn {    width: 31%;
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin: 0;
+    display: inline;
+    border-bottom: none;
+    padding: 15px 0px 17px 0;}
 
 /* Next question button */
 .next {
@@ -273,7 +303,7 @@ li.form_personal.current { min-height: 350px;}
 	width: 100%;
 	color: rgba(0,0,0,0.7);
 	font-style: italic;
-	font-size: 0.4em;
+	font-size: 0.5em;
 }
 
 .final-message {
