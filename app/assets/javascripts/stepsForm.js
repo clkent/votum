@@ -105,13 +105,13 @@
 		} );
 
 		// disable tab
-		this.el.addEventListener( 'keydown', function( ev ) {
-			var keyCode = ev.keyCode || ev.which;
+		//this.el.addEventListener( 'keydown', function( ev ) {
+		//	var keyCode = ev.keyCode || ev.which;
 			// tab
-			if( keyCode === 9 ) {
-				ev.preventDefault();
-			} 
-		} );
+		//	if( keyCode === 9 ) {
+		//		ev.preventDefault();
+		//	} 
+		//} );
 	};
 
 	stepsForm.prototype._nextQuestion = function() {
@@ -174,6 +174,8 @@
 		else {
 			onEndTransitionFn();
 		}
+
+
 	}
 
 	// updates the progress bar by setting its width
@@ -190,6 +192,7 @@
 		// insert it in the DOM
 		this.questionStatus.appendChild( this.nextQuestionNum );
 	}
+
 
 	// submits the form
 	stepsForm.prototype._submit = function() {
@@ -232,5 +235,6 @@
 
 	// add to global namespace
 	window.stepsForm = stepsForm;
+
 
 })( window );

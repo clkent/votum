@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 // paragraph
 
 .lead-block {
@@ -68,6 +70,7 @@
 	height: 0;
 	-webkit-transition: visibility 0s 0.4s, height 0s 0.4s;
 	transition: visibility 0s 0.4s, height 0s 0.4s;
+	background: #fff;
 }
 
 .questions li.current,
@@ -80,6 +83,8 @@
 
 
 li.form_personal.current { min-height: 350px;}
+
+li.form_email {z-index: 1000;}
 
 /* Labels */
 
@@ -179,15 +184,20 @@ li.form_personal.current { min-height: 350px;}
 .questions .form_personal input#user_state, .questions .form_personal .state_label{ width:15%;margin-right:18px;}
 .questions .form_personal input#user_zip, .questions .form_personal .zip_label{ width:28%;}
 
-.questions input#user_email { width: 64%; margin: 0; display: inline; border-bottom: 0;}
+.questions input#user_email { width: 83%; margin: 0; display: inline; border-bottom: 0;}
 
-.questions input.btn {    width: 31%;
-    letter-spacing: 1px;
+.questions input.btn {    
+width: 15%;
     font-size: 14px;
     margin: 0;
     display: inline;
     border-bottom: none;
-    padding: 15px 0px 17px 0;}
+    padding: 15px 0px 17px 0;
+    z-index: 200;
+    background: white;
+    font-weight: 500;
+    color: #4CD964;
+    }
 
 /* Next question button */
 .next {
@@ -203,6 +213,7 @@ li.form_personal.current { min-height: 350px;}
 	z-index: 100;
 	cursor: pointer;
 	background:none;
+	opacity: .99;
 	
 }
 

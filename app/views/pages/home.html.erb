@@ -42,11 +42,11 @@
     <div class="controls">
               <button class="next"><%= image_tag("arrow.png") %></button>
               <div class="progress"></div>
+              <span class="error-message"></span>
               <span class="number">
                 <span class="number-current"></span>
                 <span class="number-total"></span>
               </span>
-              <span class="error-message"></span>
             </div><!-- / controls -->
           </div><!-- /simform-inner -->
     <% end %>
@@ -55,12 +55,19 @@
 </div>
 
 <script>
-      var new_user = document.getElementById( 'new_user' );
 
+   
+     //add css class
+      //  if ( $("li.form_email").is(":visible")) {
+      //      $( ".next" ).hide()
+     //   }
+       
+var new_user = document.getElementById( 'new_user' );
       new stepsForm( new_user, {
+
         onSubmit : function( form ) {
           // hide form
-          classie.addClass( new_user.querySelector( '.simform-inner' ), 'hide' );
+         // classie.addClass( new_user.querySelector( '.simform-inner' ), 'hide' );
 
           /*
           form.submit()
@@ -74,4 +81,5 @@
          // classie.addClass( messageEl, 'show' );
         }
       } );
+
 </script>
