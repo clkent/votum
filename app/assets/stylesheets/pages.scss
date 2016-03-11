@@ -2,7 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//alert styles
+.alert {
+	padding: 10px;
+	margin-top:20px;
+	font-size: 11px;
+    letter-spacing: .5px;
+}
 
+.alert ul li {
+	list-style:none;
+}
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: center; }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: center; }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: center; }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: center; }
+
+.close {
+    line-height: .5 !important;
+}
+
+//user session
+
+ul.user_session li{
+	float: right;
+    display: inline;
+    margin: 10px;
+    font-size: 12px;
+    letter-spacing: .5px;
+}
 
 // paragraph
 
@@ -184,7 +231,7 @@ li.form_email {z-index: 1000;}
 .questions .form_personal input#user_state, .questions .form_personal .state_label{ width:15%;margin-right:18px;}
 .questions .form_personal input#user_zip, .questions .form_personal .zip_label{ width:28%;}
 
-.questions input#user_email { width: 83%; margin: 0; display: inline; border-bottom: 0;}
+.questions input#user_email, .questions .field_with_errors  { width: 83%; margin: 0; display: inline; border-bottom: 0;}
 
 .questions input.btn {    
 width: 15%;
