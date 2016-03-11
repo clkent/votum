@@ -1,3 +1,525 @@
+/* line 6, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.alert {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 11px;
+  letter-spacing: .5px;
+}
+
+/* line 13, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.alert ul li {
+  list-style: none;
+}
+
+/* line 16, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: center;
+}
+
+/* line 22, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: center;
+}
+
+/* line 28, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: center;
+}
+
+/* line 34, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: center;
+}
+
+/* line 40, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.close {
+  line-height: .5 !important;
+}
+
+/* line 46, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+ul.user_session li {
+  float: right;
+  display: inline;
+  margin: 10px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+/* line 56, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.lead-block {
+  margin-top: 120px;
+}
+
+/* line 60, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.lead {
+  margin-top: 20px;
+}
+
+/* line 62, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.extra {
+  margin: 10px 0;
+  font-size: 14px;
+  font-style: italic;
+  font-family: georgia;
+}
+
+/* line 71, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 860px;
+  width: 100%;
+  text-align: left;
+  font-size: 1em;
+}
+
+/* line 81, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .submit {
+  display: none;
+}
+
+/* Question list style */
+/* line 87, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  -webkit-transition: height 0.4s;
+  transition: height 0.4s;
+  display: block;
+  list-style-type: decimal;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+/* line 103, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform ol:before {
+  content: '';
+  background: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2.35em;
+}
+
+/* line 113, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions li {
+  z-index: 100;
+  position: relative;
+  visibility: hidden;
+  height: 0;
+  -webkit-transition: visibility 0s 0.4s, height 0s 0.4s;
+  transition: visibility 0s 0.4s, height 0s 0.4s;
+  background: #fff;
+}
+
+/* line 123, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions li.current,
+.no-js .questions li {
+  visibility: visible;
+  height: auto;
+  -webkit-transition: none;
+  transition: none;
+}
+
+/* line 132, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+li.form_personal.current {
+  min-height: 350px;
+}
+
+/* line 134, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+li.form_email {
+  z-index: 1000;
+}
+
+/* Labels */
+/* line 138, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions label {
+  margin: 25px 0 0 0;
+}
+
+/* line 141, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions li > span {
+  display: block;
+  overflow: hidden;
+}
+
+/* line 146, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions li > span label {
+  display: block;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* line 158, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions li.current > span label,
+.no-js .questions li > span label {
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* line 166, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.show-next .questions li.current > span label {
+  -webkit-animation: moveUpFromDown 0.4s both;
+  animation: moveUpFromDown 0.4s both;
+}
+
+@-webkit-keyframes moveUpFromDown {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes moveUpFromDown {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/* line 181, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.form_personal label, .email label {
+  float: left;
+  width: 50%;
+  display: inline;
+}
+
+/* line 187, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.form_personal span, .email label span {
+  clear: both;
+}
+
+/* Input field */
+/* line 192, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions input {
+  display: block;
+  margin: 0;
+  padding: 0.5em 1em 0.5em 0.7em;
+  width: calc(100% - 2em);
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 1em;
+  line-height: 1;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+/* line 208, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions .current input,
+.no-js .questions input {
+  opacity: 1;
+}
+
+/* line 213, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions input:focus,
+.simform button:focus {
+  outline: none;
+}
+
+/* line 218, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions .form_personal input {
+  width: 47%;
+  float: left;
+  display: inline;
+}
+
+/* line 224, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions input#user_phone {
+  border: none;
+}
+
+/* line 226, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions .form_personal input#user_first {
+  margin-right: 18px;
+}
+
+/* line 228, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions .form_personal input#user_address {
+  width: 100%;
+  margin-right: 0px;
+}
+
+/* line 230, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions .form_personal input#user_city, .questions .form_personal .city_label {
+  width: 47%;
+  margin-right: 18px;
+}
+
+/* line 231, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions .form_personal input#user_state, .questions .form_personal .state_label {
+  width: 15%;
+  margin-right: 18px;
+}
+
+/* line 232, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions .form_personal input#user_zip, .questions .form_personal .zip_label {
+  width: 28%;
+}
+
+/* line 234, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions input#user_email, .questions .field_with_errors {
+  width: 83%;
+  margin: 0;
+  display: inline;
+  border-bottom: 0;
+}
+
+/* line 236, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.questions input.btn {
+  width: 15%;
+  font-size: 14px;
+  margin: 0;
+  display: inline;
+  border-bottom: none;
+  padding: 15px 0px 17px 0;
+  z-index: 200;
+  background: white;
+  font-weight: 500;
+  color: #4CD964;
+}
+
+/* Next question button */
+/* line 250, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.next {
+  position: absolute;
+  right: 0;
+  bottom: .2em;
+  display: block;
+  padding: 0;
+  width: 3em;
+  height: 3em;
+  border: none;
+  text-align: center;
+  z-index: 100;
+  cursor: pointer;
+  background: none;
+  opacity: .99;
+}
+
+/* line 267, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.next img {
+  width: 50%;
+}
+
+/* line 271, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.next:hover {
+  opacity: .5;
+}
+
+/* line 277, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.next.show {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Progress bar */
+/* line 285, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .progress {
+  width: 0%;
+  height: 0.15em;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* line 293, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .progress::before {
+  position: absolute;
+  top: auto;
+  width: 100%;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.05);
+  content: '';
+}
+
+/* Number indicator */
+/* line 303, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .number {
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  margin: 0.4em 0;
+  width: 3em;
+  font-weight: 700;
+  font-size: 0.5em;
+}
+
+/* line 313, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .number:after {
+  position: absolute;
+  left: 50%;
+  content: '/';
+  opacity: 0.4;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 322, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .number span {
+  float: right;
+  width: 40%;
+  text-align: center;
+}
+
+/* line 328, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .number .number-current {
+  float: left;
+}
+
+/* line 332, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .number-next {
+  position: absolute;
+  left: 0;
+}
+
+/* line 337, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform.show-next .number-current {
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+/* line 344, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform.show-next .number-next {
+  -webkit-animation: moveUpFromDown 0.4s both;
+  animation: moveUpFromDown 0.4s both;
+}
+
+/* Error and final message */
+/* line 350, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .error-message,
+.simform .final-message {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+/* line 359, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform .error-message {
+  padding: 0.4em 3.5em 0 0;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+  font-size: 0.5em;
+}
+
+/* line 367, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.final-message {
+  top: 50%;
+  left: 0;
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 377, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.error-message.show,
+.final-message.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 383, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.final-message.show {
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+}
+
+/* Final hiding of form / showing message */
+/* line 389, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.simform-inner.hide {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+/* No JS Fallback */
+/* line 397, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.no-js .simform {
+  font-size: 1.75em;
+}
+
+/* line 401, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.no-js .questions li {
+  padding: 0 0 2em;
+}
+
+/* line 405, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.no-js .simform .submit {
+  display: block;
+  float: right;
+  padding: 10px 20px;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 414, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+.no-js .simform .controls {
+  display: none;
+}
+
+/* Remove IE clear cross */
+/* line 419, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+/* Adjust form for smaller screens */
+@media screen and (max-width: 44.75em) {
+  /* line 425, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+  .simform {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 33.5625em) {
+  /* line 431, /Users/chelseakent/Sites/votum/app/assets/stylesheets/pages.scss */
+  .simform {
+    font-size: 1.2em;
+  }
+}
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -5052,7 +5574,6 @@ a.label:focus, a.label:hover {
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  text-align:center;
 }
 /* line 12, /Users/chelseakent/.rbenv/versions/2.2.4/lib/ruby/gems/2.2.0/gems/bootstrap-4.0.0.alpha3/assets/stylesheets/bootstrap/_alert.scss */
 .alert > p,
