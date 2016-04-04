@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+# replace this with your tracker code
+GA.tracker = "UA-67831214-1"
+
 #config.middleware.use Rack::TwilioWebhookAuthentication, Rails.application.secrets.twilio_auth_token, '/send_sms', '/send_sms_all'
 config.middleware.use Rack::TwilioWebhookAuthentication, ENV['TWILIO_AUTH_TOKEN'], '//send_sms', '//send_sms_all'
   # Code is not reloaded between requests.

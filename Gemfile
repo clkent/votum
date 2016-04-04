@@ -14,6 +14,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
 
+#google analytics
+gem 'google-analytics-rails', '~> 1.1'
+
 #devise
 gem 'devise'
 
