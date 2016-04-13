@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
     self.password = self.password_confirmation = (0..16).map{ o[rand(o.length)] }.join if     self.password.blank?
   end
 
- after_validation :send_welcome, :on => :create
-
+ after_create :send_welcome
+ 
  def send_welcome
     number = self.phone
     account_sid = ENV["TWILIO_ACCOUNT_SID"] 

@@ -32,6 +32,7 @@
       <li class="form_email">
         <span><%= f.label :email %></span>
       <%= f.email_field :email %>
+      <%= hidden_field_tag 'user[subscribed]', true %>
      <!-- <span><%= f.label :password %></span>
       <%= f.password_field :password %>
       <span><%= f.label :password_confirmation %></span>
