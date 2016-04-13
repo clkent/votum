@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+def set_admin_timezone
+  Time.zone = 'Pacific Time (US & Canada)'
+end
+
   protected
 
   def configure_permitted_parameters
