@@ -2,6 +2,45 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//mobile styles
+
+@media (max-width: 767px) {
+    .cellphone, .logo-lrg {display:none;}
+    .lead-block {margin-top: 35px !important;}
+    .questions .form_personal input#user_city, .questions .form_personal .city_label {
+    width:45% !important;}
+
+    .textbubbles {margin-top:95px; height: 400px; border-top: 1px solid #f1f1f1;
+    padding-top: 50px;}
+    .textbubbles h6 { font-size: .95em; font-family: helvetica neue, helvetica, arial, san-serif; font-weight:800; letter-spacing:.5px; position:absolute;}
+    .textbubbles img {width: 95%; position:absolute; margin-top:55px; 
+    display: block;}
+    .textbubbles em {
+    display: block; position: absolute;
+    margin-top: 20px;
+    font-size: 12px;}
+
+    .lead { font-size: 1.6rem !important;}
+
+    .form_personal.current {margin-bottom: 40px !important;}
+
+}
+
+@media (min-width: 768px) {
+	.textbubbles {display:none;}
+}
+
+::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {color: red !important;}
+
+// main container
+
+html, body {font-family: "lato", helvetica neue, helvetica, san-serif !important;}
+.container {margin-top:35px;}
+
+footer {text-align:center; font-size: 11px;
+    padding: 20px;}
+
 //alert styles
 .alert {
 	padding: 10px;
@@ -54,16 +93,14 @@ ul.user_session li{
 // paragraph
 
 .lead-block {
-	margin-top: 120px;
+	margin-top: 90px;
 }
 
 .lead { margin-top: 20px;}
 
 .extra {
-	    margin: 10px 0;
+	margin: 10px 0;
     font-size: 14px;
-    font-style: italic;
-    font-family: georgia;
 }
 
 //Form styles
@@ -76,6 +113,11 @@ ul.user_session li{
 	width: 100%;
 	text-align: left;
 	font-size: 1em;
+}
+
+.lead-block em {
+    margin-top: 15px;
+    font-size: 11px;
 }
 
 .simform .submit {
@@ -141,6 +183,7 @@ li.form_email {z-index: 1000;}
 .questions li > span {
 	display: block;
 	overflow: hidden;
+	margin-bottom: 5px;
 }
 
 .questions li > span label {
@@ -151,7 +194,7 @@ li.form_email {z-index: 1000;}
 	transform: translateY(-100%);
 	    font-size: 11px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
@@ -221,7 +264,8 @@ li.form_email {z-index: 1000;}
     display: inline;
 }
 
-.questions input#user_phone {border:none;}
+.questions input#user_phone {border:none; height: 34px;
+    margin-top: 10px;}
 
 .questions .form_personal input#user_first { margin-right: 18px;}
 
@@ -232,6 +276,8 @@ li.form_email {z-index: 1000;}
 .questions .form_personal input#user_zip, .questions .form_personal .zip_label{ width:28%;}
 
 .questions input#user_email, .questions .field_with_errors  { width: 83%; margin: 0; display: inline; border-bottom: 0;}
+
+.questions input#user_email {padding:0;}
 
 .questions input.btn {    
 width: 15%;
@@ -250,7 +296,7 @@ width: 15%;
 .next {
 	position: absolute;
 	right: 0;
-	bottom: .2em;
+	bottom: 3px;
 	display: block;
 	padding: 0;
 	width: 3em;
@@ -297,6 +343,7 @@ width: 15%;
 	height: inherit;
 	background: rgba(0,0,0,0.05);
 	content: '';
+	left: 0;
 }
 
 /* Number indicator */

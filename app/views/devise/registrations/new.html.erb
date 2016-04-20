@@ -1,8 +1,9 @@
 
 <div class="row">
-  <div class="col-md-6">
-  <%= image_tag("cell-ss-intro.gif", width: '400') %>
+  <div class="col-md-6 cellphone">
+  <%= image_tag("cell-ss-intro.gif", width: '90%') %>
   </div>
+
 
   <div class="col-md-5 lead-block">
     <%= image_tag("votum-logo.jpg", width: '170') %>
@@ -16,7 +17,7 @@
     <div class="simform-inner">
     <ol class="questions">
       <li><span><%= f.label :phone, "What's your number?" %></span>
-      <%= f.phone_field :phone %></li>
+      <%= f.phone_field :phone, :placeholder => "202-456-1111" %></li>
 
       <li class="form_personal">
       <span class="extra">We need this info so we can look up who your represenatives are.</span>
@@ -53,15 +54,25 @@
     <% end %>
   </div>
 
+  <div class="col-md-6 textbubbles">
+    <h6>HOW IT WORKS</h6>
+    <em>we'll send you a simple texts and you just respond yes or no</em>
+    <%= image_tag("textbubbles.gif") %>
+  </div>
+
 <% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  </li>
+  <ul class="user_session">
+    <li>
+    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+    </li>
+</ul>
 <% else %>
   <!--<li>
   <%#= link_to('Login', new_user_session_path)  %>  
   </li>-->
 <% end %>
+
+<footer class="col-md-12"><em>Msg &amp; data rates may apply</em> <br/> contact:<a href="mailto:hey@getvotum.com"> hey@getvotum.com</a></footer>
 
 </div>
 
