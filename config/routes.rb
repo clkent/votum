@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   #get '/responses' => 'twilio#responses'
   #post '/responses' => 'twilio#responses'
   match '/responses' => 'twilio#responses', :via => [:get, :post]
+  get '/welcome' => "pages#welcome", as: :user_root
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
