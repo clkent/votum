@@ -6,6 +6,8 @@
 //mobile styles
 
 @media (max-width: 767px) {
+
+	/*home*/
     .cellphone, .logo-lrg {display:none;}
     .lead-block {margin-top: 35px !important;}
     .questions .form_personal input#user_city, .questions .form_personal .city_label {
@@ -24,6 +26,20 @@
     .lead { font-size: 1.6rem !important;}
 
     .form_personal.current {margin-bottom: 40px !important;}
+
+
+    /*welcome*/
+	.img-center img {display:inline !important; margin: 0px !important;}
+
+	.welcome { text-align:left !important;}
+
+	.welcome h4 {margin-top: 20px; line-height: 1.5em;
+	    margin-bottom: 40px !important;
+	}
+
+	.welcome p {margin-bottom: 20px !important;}
+
+
 
 }
 
@@ -479,3 +495,23 @@ input[type=text]::-ms-clear {
 		font-size: 1.2em;
 	}
 }
+
+
+/* Welcome */
+
+.img-center img {display:block; margin:0 auto; margin-top: 60px;}
+
+.welcome { text-align:center;}
+
+.welcome h4 {margin-top: 20px;     line-height: 1.5em;
+    margin-bottom: 60px;
+}
+
+.welcome em {     display: block;
+    font-size: 14px;
+    padding-bottom: 2px;
+    font-weight: bold;
+}
+
+.welcome p {margin-bottom: 40px; line-height: 1.65em;}
+
